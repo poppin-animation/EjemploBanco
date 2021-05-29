@@ -24,5 +24,12 @@ namespace Banco.UIForms
             this.Hide();
             
         }
+
+        private void button2_Click(object sender, EventArgs e)
+        {
+            FrmCuentas cue = new FrmCuentas(this);
+            cue.Show();
+            this.Hide();
+        }
     }
 }
