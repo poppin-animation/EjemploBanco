@@ -16,6 +16,8 @@ namespace Banco.Entidades.Dominio
         private string _apellido;
         private string _direccion;
         private string _DNI;
+        private string _email;
+        
         private Cuenta _cuenta;
 
 
@@ -31,6 +33,7 @@ namespace Banco.Entidades.Dominio
 
         [DataMember(Name = "direccion")]
         public string Direccion { get => _direccion; set => _direccion = value; }
+        public string Email { get => _email; set => _email = value; }
 
         public Cuenta Cuenta { get => _cuenta; set => _cuenta = value; }
 

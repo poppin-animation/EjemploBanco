@@ -44,6 +44,7 @@
   <ItemGroup>
     <Compile Include="Dominio\Cliente.cs" />
     <Compile Include="Dominio\Cuenta.cs" />
+    <Compile Include="Dominio\Email.cs" />
     <Compile Include="Dominio\Persona.cs" />
     <Compile Include="Modelos\TransactionResult.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />

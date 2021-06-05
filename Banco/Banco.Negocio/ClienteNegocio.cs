@@ -13,6 +13,7 @@ namespace Banco.Negocio
     {
         private ClienteMapper _clinteMapper;
         private CuentaMapper _cuentaMapper;
+        private EmailMapper _emailMapper;
 
         private List<Cliente> _listaClientes;
         private List<Cuenta> _cuentas;
@@ -23,6 +24,7 @@ namespace Banco.Negocio
             _cuentaMapper = new CuentaMapper();
             _listaClientes = new List<Cliente>();
             _cuentas = new List<Cuenta>();
+            _emailMapper = new EmailMapper();
         }
 
         public List<Cliente> Traer()
@@ -51,15 +53,24 @@ namespace Banco.Negocio
             return _listaClientes;
         }
 
-        public TransactionResult Agregar(string nombre, string apellido, string fechaNac, int dni)
+        public TransactionResult Agregar(string nombre, string apellido, string fechaNac, int dni, string email = "alumnocai1@yopmail.com")
         {
             Cliente cliente = new Cliente();
             cliente.Nombre = nombre;
             cliente.Ape = apellido;
             cliente.DNI = dni.ToString();
+            cliente.Email = email;
 
+            TransactionResult result = _clinteMapper.Insertar(cliente);
 
-            return _clinteMapper.Insertar(cliente);
+            if (result.IsOk)
+            {
+                //mandar mail
+                Email emailAEnviar = new Email(cliente.Email,"ALTA CLIENTE EXITOSA","Bienvenido a Banco S.A.");
+                TransactionResult resultadoEnvioMail = _emailMapper.Insertar(emailAEnviar);
+            }
+
+            return result;
         }
     }
 }
