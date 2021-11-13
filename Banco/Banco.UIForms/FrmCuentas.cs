@@ -36,12 +36,13 @@ namespace Banco.UIForms
         private void CargarComboClientes()
         {
             cmbClientes.DataSource = null;
-            cmbClientes.DataSource = _clienteNegocio.Traer();
+            cmbClientes.DataSource = _clienteNegocio.TraerConCuentas();
         }
 
         private void CargarCuenta()
         {
-            Cuenta c = ((Cliente)cmbClientes.SelectedItem).Cuenta;
+            Cliente clienteSeleccionado = (Cliente)cmbClientes.SelectedItem;
+            Cuenta c = clienteSeleccionado.Cuenta;
 
             if (c != null)
             {
@@ -49,6 +50,7 @@ namespace Banco.UIForms
                 textBox2.Text = c.Descripcion;
                 textBox3.Text = c.Saldo.ToString("0.00");
                 textBox4.Text = c.FechaApertura.ToString("yyyy-MM-dd");
+                
                 textBox1.Enabled = false;
                 textBox2.Enabled = false;
                 textBox3.Enabled = true;
@@ -131,6 +133,11 @@ namespace Banco.UIForms
             {
                 Limpiar();
             }
+
+        }
+
+        private void label3_Click(object sender, EventArgs e)
+        {
 
         }
     }

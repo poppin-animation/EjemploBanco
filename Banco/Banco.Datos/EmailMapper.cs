@@ -3,6 +3,7 @@ using Banco.Entidades.Modelos;
 using Newtonsoft.Json;
 using System;
 using System.Collections.Generic;
+using System.Collections.Specialized;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
@@ -28,7 +29,7 @@ namespace Banco.Datos
             NameValueCollection n = new NameValueCollection();
             n.Add("para", email.Para);
             n.Add("asunto", email.Asunto  );
-            n.Add("mensaje", email.Mesnsaje);
+            n.Add("mensaje", email.Mensaje);
             
             return n;
         }

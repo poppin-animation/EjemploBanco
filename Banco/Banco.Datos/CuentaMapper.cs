@@ -54,7 +54,7 @@ namespace Banco.Datos
         {
             NameValueCollection obj = ReverseMapActualizar(cuenta);
 
-            string json = WebHelper.Post("cuenta", obj);
+            string json = WebHelper.Put("cuenta", obj);
 
             TransactionResult lst = JsonConvert.DeserializeObject<TransactionResult>(json);
 
@@ -64,8 +64,9 @@ namespace Banco.Datos
         private NameValueCollection ReverseMapAlta(Cuenta cuenta)
         {
             NameValueCollection nv = new NameValueCollection();
-
+            nv.Add("id", cuenta.id.ToString());
             nv.Add("idCliente", cuenta.idCliente.ToString());
+            nv.Add("Saldo", cuenta.Saldo.ToString());
             nv.Add("Descripcion", cuenta.Descripcion);
 
             return nv;

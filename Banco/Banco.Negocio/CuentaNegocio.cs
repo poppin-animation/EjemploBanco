@@ -29,7 +29,8 @@ namespace Banco.Negocio
 
             if (result.IsOk)
             {
-                return _cuentaMapper.Traer(cuenta.idCliente);
+                Cuenta cuentaNueva = _cuentaMapper.Traer(cuenta.idCliente);
+                return cuentaNueva;
             }
             else
                 return null;
@@ -40,7 +41,7 @@ namespace Banco.Negocio
         {
             TransactionResult result = _cuentaMapper.Actualizar(cuenta);
 
-            if (!result.IsOk)
+            if (result.IsOk)
             {
                 //ir a buscar la cuenta nuevamente
                 return _cuentaMapper.Traer(cuenta.idCliente);

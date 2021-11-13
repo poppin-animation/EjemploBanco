@@ -21,16 +21,27 @@ namespace Banco.Datos
 
         private List<Cliente> MapList(string json)
         {
-            List<Cliente> lst = JsonConvert.DeserializeObject<List<Cliente>>(json);
+            List<Cliente> lst = JsonConvert.DeserializeObject<List<Cliente>>(json); // deserializacion
             return lst;
         }
 
         public TransactionResult Insertar(Cliente cliente)
         {
-            NameValueCollection obj = ReverseMap(cliente);
+            NameValueCollection obj = ReverseMap(cliente); //serializacion -> json
             
             string json = WebHelper.Post("cliente", obj);
             
+            TransactionResult lst = JsonConvert.DeserializeObject<TransactionResult>(json);
+
+            return lst;
+        }
+
+        public TransactionResult Actualizar(Cliente cliente)
+        {
+            NameValueCollection obj = ReverseMap(cliente);
+
+            string json = WebHelper.Put("cliente", obj);
+
             TransactionResult lst = JsonConvert.DeserializeObject<TransactionResult>(json);
 
             return lst;
@@ -39,14 +50,18 @@ namespace Banco.Datos
         {
             NameValueCollection n = new NameValueCollection();
             n.Add("id", cliente.id.ToString());
-            n.Add("nombre", cliente.Nombre);
-            n.Add("apellido", cliente.Ape);
-            n.Add("direccion", cliente.Direccion);
-            n.Add("DNI", cliente.DNI);
-            n.Add("fechaNacimiento", "2000-01-01");
-            n.Add("usuario", "1");
+            n.Add("Nombre", cliente.Nombre);
+            n.Add("Apellido", cliente.Ape);
+            n.Add("Direccion", cliente.Direccion);
+            n.Add("Telefono", cliente.Telefono);
+            n.Add("Email", cliente.Email);
+            n.Add("DNI", cliente.DNI.ToString());
+            n.Add("Activo", cliente.Activo.ToString());
+            n.Add("FechaNacimiento", cliente.FechaNac.ToString("yyyy-MM-dd"));
+            n.Add("Usuario", "41218");
             return n;
         }
 
+       
     }
 }
