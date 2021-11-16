@@ -46,6 +46,9 @@
     <Compile Include="Dominio\Cuenta.cs" />
     <Compile Include="Dominio\Email.cs" />
     <Compile Include="Dominio\Persona.cs" />
+    <Compile Include="Dominio\TarjetaCredito.cs" />
+    <Compile Include="Enums\PeriodoEnum.cs" />
+    <Compile Include="Enums\TipoTarjetaEnum.cs" />
     <Compile Include="Modelos\TransactionResult.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
