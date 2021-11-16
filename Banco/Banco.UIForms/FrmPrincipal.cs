@@ -31,5 +31,12 @@ namespace Banco.UIForms
             cue.Show();
             this.Hide();
         }
+
+        private void button3_Click(object sender, EventArgs e)
+        {
+            FrmTarjetaCredito cue = new FrmTarjetaCredito();
+            cue.Show();
+            
+        }
     }
 }

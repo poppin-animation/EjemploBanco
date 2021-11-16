@@ -48,6 +48,8 @@ namespace Banco.UIForms
             this._txtPromedio = new System.Windows.Forms.TextBox();
             this.panel1 = new System.Windows.Forms.Panel();
             this.panel2 = new System.Windows.Forms.Panel();
+            this._cmbClientes = new System.Windows.Forms.ComboBox();
+            this.label6 = new System.Windows.Forms.Label();
             this.panel1.SuspendLayout();
             this.panel2.SuspendLayout();
             this.SuspendLayout();
@@ -86,7 +88,7 @@ namespace Banco.UIForms
             // 
             this.label4.AutoSize = true;
             this.label4.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label4.Location = new System.Drawing.Point(11, 328);
+            this.label4.Location = new System.Drawing.Point(11, 382);
             this.label4.Name = "label4";
             this.label4.Size = new System.Drawing.Size(146, 21);
             this.label4.TabIndex = 3;
@@ -96,7 +98,7 @@ namespace Banco.UIForms
             // 
             this.label5.AutoSize = true;
             this.label5.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label5.Location = new System.Drawing.Point(11, 198);
+            this.label5.Location = new System.Drawing.Point(11, 255);
             this.label5.Name = "label5";
             this.label5.Size = new System.Drawing.Size(131, 21);
             this.label5.TabIndex = 4;
@@ -116,7 +118,7 @@ namespace Banco.UIForms
             // 
             this.label8.AutoSize = true;
             this.label8.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label8.Location = new System.Drawing.Point(25, 328);
+            this.label8.Location = new System.Drawing.Point(25, 390);
             this.label8.Name = "label8";
             this.label8.Size = new System.Drawing.Size(200, 21);
             this.label8.TabIndex = 7;
@@ -126,7 +128,7 @@ namespace Banco.UIForms
             // 
             this.label9.AutoSize = true;
             this.label9.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label9.Location = new System.Drawing.Point(25, 382);
+            this.label9.Location = new System.Drawing.Point(25, 444);
             this.label9.Name = "label9";
             this.label9.Size = new System.Drawing.Size(125, 21);
             this.label9.TabIndex = 8;
@@ -139,7 +141,7 @@ namespace Banco.UIForms
             this.lstTarjetas.ItemHeight = 21;
             this.lstTarjetas.Location = new System.Drawing.Point(29, 72);
             this.lstTarjetas.Name = "lstTarjetas";
-            this.lstTarjetas.Size = new System.Drawing.Size(326, 235);
+            this.lstTarjetas.Size = new System.Drawing.Size(418, 298);
             this.lstTarjetas.TabIndex = 91;
             // 
             // _cmbTipoTarjeta
@@ -165,7 +167,7 @@ namespace Banco.UIForms
             // _txtLimite
             // 
             this._txtLimite.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this._txtLimite.Location = new System.Drawing.Point(174, 190);
+            this._txtLimite.Location = new System.Drawing.Point(174, 247);
             this._txtLimite.Name = "_txtLimite";
             this._txtLimite.Size = new System.Drawing.Size(176, 29);
             this._txtLimite.TabIndex = 2;
@@ -173,7 +175,7 @@ namespace Banco.UIForms
             // _txtNroPlastico
             // 
             this._txtNroPlastico.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this._txtNroPlastico.Location = new System.Drawing.Point(174, 325);
+            this._txtNroPlastico.Location = new System.Drawing.Point(174, 379);
             this._txtNroPlastico.Name = "_txtNroPlastico";
             this._txtNroPlastico.ReadOnly = true;
             this._txtNroPlastico.Size = new System.Drawing.Size(176, 29);
@@ -182,7 +184,7 @@ namespace Banco.UIForms
             // _btnCalcular
             // 
             this._btnCalcular.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this._btnCalcular.Location = new System.Drawing.Point(15, 245);
+            this._btnCalcular.Location = new System.Drawing.Point(15, 311);
             this._btnCalcular.Name = "_btnCalcular";
             this._btnCalcular.Size = new System.Drawing.Size(335, 46);
             this._btnCalcular.TabIndex = 3;
@@ -193,7 +195,7 @@ namespace Banco.UIForms
             // _btnAlta
             // 
             this._btnAlta.Font = new System.Drawing.Font("Segoe UI", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this._btnAlta.Location = new System.Drawing.Point(15, 374);
+            this._btnAlta.Location = new System.Drawing.Point(15, 431);
             this._btnAlta.Name = "_btnAlta";
             this._btnAlta.Size = new System.Drawing.Size(335, 45);
             this._btnAlta.TabIndex = 4;
@@ -204,7 +206,7 @@ namespace Banco.UIForms
             // _txtCantidad
             // 
             this._txtCantidad.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this._txtCantidad.Location = new System.Drawing.Point(255, 328);
+            this._txtCantidad.Location = new System.Drawing.Point(347, 390);
             this._txtCantidad.Name = "_txtCantidad";
             this._txtCantidad.ReadOnly = true;
             this._txtCantidad.Size = new System.Drawing.Size(100, 29);
@@ -213,7 +215,7 @@ namespace Banco.UIForms
             // _txtPromedio
             // 
             this._txtPromedio.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this._txtPromedio.Location = new System.Drawing.Point(255, 374);
+            this._txtPromedio.Location = new System.Drawing.Point(347, 436);
             this._txtPromedio.Name = "_txtPromedio";
             this._txtPromedio.ReadOnly = true;
             this._txtPromedio.Size = new System.Drawing.Size(100, 29);
@@ -221,6 +223,8 @@ namespace Banco.UIForms
             // 
             // panel1
             // 
+            this.panel1.Controls.Add(this._cmbClientes);
+            this.panel1.Controls.Add(this.label6);
             this.panel1.Controls.Add(this._btnAlta);
             this.panel1.Controls.Add(this._btnCalcular);
             this.panel1.Controls.Add(this._txtNroPlastico);
@@ -234,7 +238,7 @@ namespace Banco.UIForms
             this.panel1.Controls.Add(this.label1);
             this.panel1.Location = new System.Drawing.Point(7, 21);
             this.panel1.Name = "panel1";
-            this.panel1.Size = new System.Drawing.Size(371, 436);
+            this.panel1.Size = new System.Drawing.Size(371, 495);
             this.panel1.TabIndex = 18;
             // 
             // panel2
@@ -247,14 +251,34 @@ namespace Banco.UIForms
             this.panel2.Controls.Add(this.label7);
             this.panel2.Location = new System.Drawing.Point(396, 21);
             this.panel2.Name = "panel2";
-            this.panel2.Size = new System.Drawing.Size(370, 436);
+            this.panel2.Size = new System.Drawing.Size(471, 495);
             this.panel2.TabIndex = 19;
+            // 
+            // _cmbClientes
+            // 
+            this._cmbClientes.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
+            this._cmbClientes.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this._cmbClientes.FormattingEnabled = true;
+            this._cmbClientes.Location = new System.Drawing.Point(174, 187);
+            this._cmbClientes.Name = "_cmbClientes";
+            this._cmbClientes.Size = new System.Drawing.Size(176, 29);
+            this._cmbClientes.TabIndex = 91;
+            // 
+            // label6
+            // 
+            this.label6.AutoSize = true;
+            this.label6.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label6.Location = new System.Drawing.Point(11, 190);
+            this.label6.Name = "label6";
+            this.label6.Size = new System.Drawing.Size(58, 21);
+            this.label6.TabIndex = 92;
+            this.label6.Text = "Cliente";
             // 
             // FrmTarjetaCredito
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(776, 477);
+            this.ClientSize = new System.Drawing.Size(879, 545);
             this.Controls.Add(this.panel2);
             this.Controls.Add(this.panel1);
             this.Name = "FrmTarjetaCredito";
@@ -289,5 +313,7 @@ namespace Banco.UIForms
         private System.Windows.Forms.TextBox _txtPromedio;
         private System.Windows.Forms.Panel panel1;
         private System.Windows.Forms.Panel panel2;
+        private System.Windows.Forms.ComboBox _cmbClientes;
+        private System.Windows.Forms.Label label6;
     }
 }
