@@ -1,4 +1,5 @@
-﻿using System;
+﻿using Banco.Entidades.Enums;
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Runtime.Serialization;
@@ -36,13 +37,19 @@ namespace Banco.Entidades.Dominio
         public double LimiteCompra { get => _limiteCompra; set => _limiteCompra = value; }
         public Cliente Cliente { get => _cliente; set => _cliente = value; }
 
-        public TarjetaCredito(int tipo, int periodo, string plastico, string usuario, int idCliente)
+        public TarjetaCredito(int tipo, int periodo, string plastico,double limite, int idCliente)
         {
             this._tipo = tipo;
             this._periodo = periodo;
             this._nroPlastico = plastico;
-            this._usuario = usuario;
             this._idCliente = idCliente;
+            this._limiteCompra = limite;
+        }
+
+        public override string ToString()
+        {
+
+            return $"{this.IdCliente}) {(TipoTarjetaEnum)this.Tipo} {this.NroPlastico} - {this.LimiteCompra.ToString("$ 0.00") }";
         }
 
     }

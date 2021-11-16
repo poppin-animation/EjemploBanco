@@ -43,6 +43,13 @@ namespace Banco.Entidades.Dominio
         [DataMember(Name = "FechaNacimiento")]
         public DateTime FechaNac { get => _fechaNac; set => _fechaNac = value; }
 
+        public string DisplayParaCombo
+        {
+            get
+            {
+                return $"{this._apellido}, {this._nombre}";
+            }
+        }
         public Cliente()
         {
             

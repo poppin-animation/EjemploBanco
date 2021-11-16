@@ -49,12 +49,13 @@
     <Compile Include="Dominio\TarjetaCredito.cs" />
     <Compile Include="Enums\PeriodoEnum.cs" />
     <Compile Include="Enums\TipoTarjetaEnum.cs" />
+    <Compile Include="Excepciones\ClienteSinCuentaException.cs" />
+    <Compile Include="Excepciones\ClienteSinLimiteException.cs" />
+    <Compile Include="Modelos\OperadorFormulario.cs" />
     <Compile Include="Modelos\TransactionResult.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
-  <ItemGroup>
-    <Folder Include="Excepciones\" />
-  </ItemGroup>
+  <ItemGroup />
   <ItemGroup>
     <None Include="packages.config" />
   </ItemGroup>

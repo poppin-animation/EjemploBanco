@@ -16,7 +16,7 @@ namespace Banco.Datos
 
         public List<TarjetaCredito> Traer()
         {
-            string json2 = WebHelper.Get("TarjetaCredito/" + "1");
+            string json2 = WebHelper.Get("TarjetaCredito/" + XXXXXX); // tu registro
             List<TarjetaCredito> resultado = MapList(json2);
             return resultado;
         }
@@ -47,8 +47,8 @@ namespace Banco.Datos
             nv.Add("periodoVencimiento", tarjeta.Periodo.ToString());
             nv.Add("limiteCompra", tarjeta.LimiteCompra.ToString("0.00"));
             nv.Add("nroPlastico", tarjeta.NroPlastico);
-            nv.Add("usuario", "1");
-            nv.Add("idCliente", "1");
+            nv.Add("usuario", XXXXXXX); // TU REGISTRO
+            nv.Add("idCliente", tarjeta.IdCliente.ToString());
 
             return nv;
         }
